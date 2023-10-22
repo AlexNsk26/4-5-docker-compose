@@ -1,0 +1,18 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    volumes:
+    - /home/bogdanov/data:/var/lib/postgresql/data
+    ports:
+    - 5432:5432
+    networks:
+    - my-pg-network
+    environment:
+      POSTGRES_USER: alex
+      POSTGRES_PASSWORD: 123
+    restart: unless-stopped
+networks:
+  my-pg-network:
+    name: my-pg-network
+    driver: bridge
