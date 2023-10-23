@@ -16,4 +16,3 @@ networks:
   my-pg-network:
     name: my-pg-network
     driver: bridge
-    
